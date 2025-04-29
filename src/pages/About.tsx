@@ -18,7 +18,7 @@ const About = () => {
             <div>
               <div className="glass overflow-hidden mb-6 border border-primary/20">
                 <img 
-                  src="public/lovable-uploads/f6a69d67-5d06-4dc5-9dc0-fffcb3f93ab4.png" 
+                  src="/lovable-uploads/f6a69d67-5d06-4dc5-9dc0-fffcb3f93ab4.png" 
                   alt="Jackson Vondemkamp" 
                   className="w-full h-auto"
                 />

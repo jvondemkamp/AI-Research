@@ -4,6 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 const Index = () => {
   return (
@@ -51,6 +58,91 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Research Carousel Section */}
+      <section className="section-padding bg-gradient-to-br from-primary/5 to-accent/10">
+        <div className="page-container">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Explore My Research</h2>
+          
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              <CarouselItem>
+                <Card className="border-primary/20 shadow-lg card-gradient h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center h-[300px] justify-center">
+                    <h3 className="text-xl font-bold mb-4">About Me</h3>
+                    <p className="mb-6 text-foreground/80">Learn about my academic journey and why I'm passionate about this research.</p>
+                    <Button asChild variant="outline">
+                      <Link to="/about" className="inline-flex items-center">
+                        Visit <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem>
+                <Card className="border-primary/20 shadow-lg card-gradient h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center h-[300px] justify-center">
+                    <h3 className="text-xl font-bold mb-4">References</h3>
+                    <p className="mb-6 text-foreground/80">Browse through the academic sources that form the foundation of my research.</p>
+                    <Button asChild variant="outline">
+                      <Link to="/references" className="inline-flex items-center">
+                        View References <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem>
+                <Card className="border-primary/20 shadow-lg card-gradient h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center h-[300px] justify-center">
+                    <h3 className="text-xl font-bold mb-4">Popular Science Article</h3>
+                    <p className="mb-6 text-foreground/80">Read my article explaining the research in accessible terms.</p>
+                    <Button asChild variant="outline">
+                      <Link to="/article" className="inline-flex items-center">
+                        Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem>
+                <Card className="border-primary/20 shadow-lg card-gradient h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center h-[300px] justify-center">
+                    <h3 className="text-xl font-bold mb-4">Science Poster</h3>
+                    <p className="mb-6 text-foreground/80">View my research summarized in a visual presentation format.</p>
+                    <Button asChild variant="outline">
+                      <Link to="/poster" className="inline-flex items-center">
+                        View Poster <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="left-0 lg:-left-12" />
+            <CarouselNext className="right-0 lg:-right-12" />
+          </Carousel>
+        </div>
+      </section>
+
+      {/* Featured Research Image */}
+      <section className="section-padding bg-background">
+        <div className="page-container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gradient text-center">Featured Research</h2>
+            <div className="glass overflow-hidden mb-6 p-4">
+              <img 
+                src="public/lovable-uploads/84c5ea2a-fee0-4c8c-a0ac-35397a5b5926.png" 
+                alt="Research visualization" 
+                className="w-full h-auto rounded shadow-lg"
+              />
+              <div className="mt-4 text-center">
+                <p className="text-foreground/80">A visualization from my research on [topic]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Call To Action */}
       <section className="section-padding bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="page-container text-center">
