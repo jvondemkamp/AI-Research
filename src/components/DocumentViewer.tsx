@@ -3,15 +3,16 @@ import { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp, FileText } from 'lucide-react';
+import { ChevronDown, ChevronUp, FileText, FilePdf } from 'lucide-react';
 
 type DocumentViewerProps = {
   title: string;
-  content: string;
+  content?: string;
+  pdfUrl?: string;
   onBack?: () => void;
 };
 
-const DocumentViewer = ({ title, content, onBack }: DocumentViewerProps) => {
+const DocumentViewer = ({ title, content, pdfUrl, onBack }: DocumentViewerProps) => {
   const [zoom, setZoom] = useState([100]);
   
   return (
@@ -44,16 +45,35 @@ const DocumentViewer = ({ title, content, onBack }: DocumentViewerProps) => {
       </div>
       
       <div className="border rounded-lg overflow-hidden bg-background p-6">
-        <div 
-          className="prose prose-invert max-w-none"
-          style={{ 
-            transform: `scale(${zoom[0]/100})`, 
-            transformOrigin: 'top left',
-            fontSize: '1.1rem',
-            lineHeight: '1.7'
-          }}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        {pdfUrl ? (
+          <div className="w-full" style={{ height: "70vh" }}>
+            <object
+              data={pdfUrl}
+              type="application/pdf"
+              width="100%"
+              height="100%"
+              className="border-0"
+            >
+              <p>
+                It appears your browser doesn't support embedded PDFs.
+                You can <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">download the PDF</a> instead.
+              </p>
+            </object>
+          </div>
+        ) : content ? (
+          <div 
+            className="prose prose-invert max-w-none"
+            style={{ 
+              transform: `scale(${zoom[0]/100})`, 
+              transformOrigin: 'top left',
+              fontSize: '1.1rem',
+              lineHeight: '1.7'
+            }}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        ) : (
+          <p className="text-center text-muted-foreground py-10">No content available</p>
+        )}
       </div>
     </div>
   );

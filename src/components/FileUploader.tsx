@@ -7,12 +7,14 @@ type FileUploaderProps = {
   onViewContent: () => void;
   label?: string;
   description?: string;
+  icon?: React.ReactNode;
 };
 
 const FileUploader = ({ 
   onViewContent, 
   label = "View Document",
-  description = "Click to view the document"
+  description = "Click to view the document",
+  icon
 }: FileUploaderProps) => {
   
   return (
@@ -20,7 +22,7 @@ const FileUploader = ({
       className="border-2 border-dashed rounded-lg p-8 text-center border-primary/30 hover:border-primary/60 transition-colors cursor-pointer"
       onClick={onViewContent}
     >
-      <FileText className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+      {icon || <FileText className="mx-auto h-12 w-12 text-muted-foreground mb-4" />}
       <h3 className="text-lg font-medium mb-2">{label}</h3>
       <p className="text-muted-foreground mb-4">
         {description}

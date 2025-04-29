@@ -6,7 +6,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FileUploader from '../components/FileUploader';
 import DocumentViewer from '../components/DocumentViewer';
 
-// Pre-loaded article and letter content in HTML format
+// PDF file paths (assuming they're in the public directory)
+const ARTICLE_PDF = '/article.pdf';
+const LETTER_PDF = '/letter.pdf';
+
+// Pre-loaded article and letter content in HTML format as fallback
 const ARTICLE_CONTENT = `
 <h1>Climate Change and Its Effects on Alpine Ecosystems</h1>
 <p class="text-muted-foreground">Published: April 15, 2025</p>
@@ -101,6 +105,7 @@ const Article = () => {
                       onViewContent={showArticle}
                       label="View Research Article"
                       description="Click to read my published research on alpine ecosystem responses to climate change"
+                      icon={<FilePdf className="mx-auto h-12 w-12 text-muted-foreground mb-4" />}
                     />
                   </CardContent>
                 </Card>
@@ -113,6 +118,7 @@ const Article = () => {
                       onViewContent={showLetter}
                       label="View Letter to the Editor"
                       description="Click to read my response to a recent publication on climate velocity in mountain ecosystems"
+                      icon={<FilePdf className="mx-auto h-12 w-12 text-muted-foreground mb-4" />}
                     />
                   </CardContent>
                 </Card>
@@ -123,7 +129,8 @@ const Article = () => {
           {view === 'article' && (
             <DocumentViewer 
               title="Climate Change and Its Effects on Alpine Ecosystems" 
-              content={ARTICLE_CONTENT}
+              pdfUrl={ARTICLE_PDF}
+              content={ARTICLE_CONTENT} // Fallback content
               onBack={showOverview}
             />
           )}
@@ -131,7 +138,8 @@ const Article = () => {
           {view === 'letter' && (
             <DocumentViewer 
               title="Letter to the Editor - Journal of Alpine Ecology" 
-              content={LETTER_CONTENT}
+              pdfUrl={LETTER_PDF}
+              content={LETTER_CONTENT} // Fallback content
               onBack={showOverview}
             />
           )}
