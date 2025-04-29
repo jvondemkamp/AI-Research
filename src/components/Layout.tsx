@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 type LayoutProps = {
@@ -17,9 +16,10 @@ const Layout = ({ children }: LayoutProps) => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About Me', path: '/about' },
-    { name: 'References', path: '/references' },
-    { name: 'Popular Science Article', path: '/article' },
+    { name: 'Letter to the Editor', path: '/letter-to-editor' },
+    { name: 'Research Article', path: '/research-article' },
     { name: 'Science Poster', path: '/poster' },
+    { name: 'References', path: '/references' },
   ];
 
   return (
@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
       <header className="bg-background/95 backdrop-blur-sm shadow-md py-4 sticky top-0 z-50 border-b border-primary/20">
         <div className="page-container flex justify-between items-center">
           <NavLink to="/" className="text-2xl font-heading font-bold text-gradient">
-            AI Research
+            Jackson Vondemkamp
           </NavLink>
           
           {/* Desktop Navigation */}

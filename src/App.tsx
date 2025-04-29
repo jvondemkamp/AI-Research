@@ -1,13 +1,13 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import References from "./pages/References";
-import Article from "./pages/Article";
+import ResearchArticle from "./pages/ResearchArticle";
+import LetterToEditor from "./pages/LetterToEditor";
 import Poster from "./pages/Poster";
 import NotFound from "./pages/NotFound";
 
@@ -19,16 +19,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/references" element={<References />} />
-          <Route path="/article" element={<Article />} />
+          <Route path="/research-article" element={<ResearchArticle />} />
+          <Route path="/letter-to-editor" element={<LetterToEditor />} />
           <Route path="/poster" element={<Poster />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );

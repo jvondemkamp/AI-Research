@@ -1,11 +1,9 @@
-
 import Layout from '../components/Layout';
-import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   return (
     <Layout>
-      <section className="hero-section" style={{height: '40vh', minHeight: '300px'}}>
+      <section className="hero-section" style={{ height: '40vh', minHeight: '300px' }}>
         <div className="page-container h-full flex items-center">
           <h1 className="text-3xl md:text-5xl font-bold">About Me</h1>
         </div>
@@ -13,70 +11,38 @@ const About = () => {
       </section>
 
       <section className="section-padding bg-background">
-        <div className="page-container">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="glass overflow-hidden mb-6 border border-primary/20">
-                <img 
-                  src="/lovable-uploads/f6a69d67-5d06-4dc5-9dc0-fffcb3f93ab4.png" 
-                  alt="Jackson Vondemkamp" 
-                  className="w-full h-auto"
-                />
-              </div>
-              
-              <Card className="border-primary/20 shadow-md card-gradient">
-                <CardContent className="p-6">
-                  <h3 className="font-heading text-xl font-bold mb-3 text-primary">At a Glance</h3>
-                  <ul className="space-y-2 text-foreground/90">
-                    <li className="flex items-start">
-                      <span className="font-bold mr-2 text-foreground">Major:</span>
-                      <span>Computer Science</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-bold mr-2 text-foreground">Year:</span>
-                      <span>Senior</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-bold mr-2 text-foreground">Research Focus:</span>
-                      <span>AI Efficiency & Computational Optimization</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-bold mr-2 text-foreground">Future Goals:</span>
-                      <span>Graduate studies in Machine Learning</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">My Science Journey</h2>
-                <p className="text-lg text-foreground/80 mb-4">
-                  [Your story about how you came to study science at the university. What sparked your interest? Was there a particular moment or experience that led you to this path?]
-                </p>
-                <p className="text-lg text-foreground/80">
-                  [Continue your personal story, discussing your academic journey and how you've evolved as a student and researcher.]
-                </p>
-              </div>
-              
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Why This Research Matters to Me</h2>
-                <p className="text-lg text-foreground/80 mb-4">
-                  [Explain why you chose this particular research topic. Was there a personal connection? A gap in knowledge you noticed? A professor's influence?]
-                </p>
-                <p className="text-lg text-foreground/80">
-                  [Discuss the personal significance of this research and how it aligns with your academic and career goals.]
-                </p>
-              </div>
-              
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Future Aspirations</h2>
-                <p className="text-lg text-foreground/80">
-                  [Describe what you want to do with your degree after graduation. Are you planning to pursue graduate school, enter industry, teach, or something else? How does this research experience fit into those plans?]
-                </p>
-              </div>
-            </div>
+        <div className="page-container grid gap-8 md:grid-cols-2 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-foreground/80">
+              Hi, I’m <strong>Jackson Vondemkamp</strong>.
+            </p>
+            <p className="text-lg text-foreground/80">
+              I’m a Computer Science student at the University of Colorado Boulder, specializing in full-stack development and entrepreneurial tech solutions. I’m building projects with the goal of launching startups—and I’m excited about where the future of AI and product development is heading.
+            </p>
+            <p className="text-lg text-foreground/80">
+              Growing up, technology has always caught my interest! Learning about the inner workings of software is something that CU Boulder has allowed me to explore further.
+            </p>
+            <p className="text-lg text-foreground/80">
+              More recently, I’ve become fascinated by how AI intersects with entrepreneurship—how tools like ChatGPT can change industries, or how data can drive better business decisions. It’s no longer just about building apps for me; it’s about creating products that solve real problems with teams I believe in.
+            </p>
+            <p className="text-lg text-foreground/80">
+              As of recently, I've been working on startups! You can learn more about this on{' '}
+              <a
+                href="https://jacksonvondemkamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+              >
+                jacksonvondemkamp.com
+              </a>.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/IMG_7534.jpg"
+              alt="Jackson Vondemkamp"
+              className="rounded-lg shadow-lg w-full h-auto"
+            />
           </div>
         </div>
       </section>
