@@ -12,36 +12,36 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 mix-blend-multiply"></div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="page-container">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="bg-muted rounded-lg overflow-hidden mb-6">
-                <div className="aspect-[4/5] bg-muted flex items-center justify-center text-muted-foreground">
+              <div className="glass overflow-hidden mb-6 border border-primary/20">
+                <div className="aspect-[4/5] bg-muted/30 flex items-center justify-center text-muted-foreground">
                   {/* Replace with your image */}
                   <p className="text-lg font-medium">Your Image Here</p>
                 </div>
               </div>
               
-              <Card className="border-0 shadow-md">
+              <Card className="border-primary/20 shadow-md card-gradient">
                 <CardContent className="p-6">
-                  <h3 className="font-heading text-xl font-bold mb-3">At a Glance</h3>
-                  <ul className="space-y-2">
+                  <h3 className="font-heading text-xl font-bold mb-3 text-primary">At a Glance</h3>
+                  <ul className="space-y-2 text-foreground/90">
                     <li className="flex items-start">
-                      <span className="font-bold mr-2">Major:</span>
-                      <span>[Your Major]</span>
+                      <span className="font-bold mr-2 text-foreground">Major:</span>
+                      <span>Computer Science</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-bold mr-2">Year:</span>
-                      <span>[Your Year in School]</span>
+                      <span className="font-bold mr-2 text-foreground">Year:</span>
+                      <span>Senior</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-bold mr-2">Research Focus:</span>
-                      <span>[Your Research Focus]</span>
+                      <span className="font-bold mr-2 text-foreground">Research Focus:</span>
+                      <span>AI Efficiency & Computational Optimization</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-bold mr-2">Future Goals:</span>
-                      <span>[Your Career/Academic Goals]</span>
+                      <span className="font-bold mr-2 text-foreground">Future Goals:</span>
+                      <span>Graduate studies in Machine Learning</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -50,7 +50,7 @@ const About = () => {
             
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">My Science Journey</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">My Science Journey</h2>
                 <p className="text-lg text-foreground/80 mb-4">
                   [Your story about how you came to study science at the university. What sparked your interest? Was there a particular moment or experience that led you to this path?]
                 </p>
@@ -60,7 +60,7 @@ const About = () => {
               </div>
               
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Why This Research Matters to Me</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Why This Research Matters to Me</h2>
                 <p className="text-lg text-foreground/80 mb-4">
                   [Explain why you chose this particular research topic. Was there a personal connection? A gap in knowledge you noticed? A professor's influence?]
                 </p>
@@ -70,7 +70,7 @@ const About = () => {
               </div>
               
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Future Aspirations</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Future Aspirations</h2>
                 <p className="text-lg text-foreground/80">
                   [Describe what you want to do with your degree after graduation. Are you planning to pursue graduate school, enter industry, teach, or something else? How does this research experience fit into those plans?]
                 </p>

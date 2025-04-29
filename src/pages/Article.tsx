@@ -12,29 +12,29 @@ const Article = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 mix-blend-multiply"></div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="page-container">
           <div className="max-w-3xl mx-auto">
-            <Card className="border-0 shadow-lg overflow-hidden mb-10">
-              <div className="h-64 bg-muted flex items-center justify-center">
+            <Card className="border border-primary/20 shadow-lg overflow-hidden mb-10 card-gradient">
+              <div className="h-64 bg-muted/30 flex items-center justify-center">
                 <p className="text-lg text-muted-foreground">Feature Image for Your Article</p>
               </div>
               
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold font-heading text-center mb-2">[Your Article Title]</h2>
-                <p className="text-muted-foreground text-center mb-8">[Subtitle or brief description]</p>
+                <h2 className="text-3xl font-bold font-heading text-center mb-2 text-gradient">Making AI More Accessible</h2>
+                <p className="text-muted-foreground text-center mb-8">How efficient training methods are democratizing artificial intelligence</p>
                 
-                <div className="prose prose-lg max-w-none">
+                <div className="prose prose-lg max-w-none text-foreground/90">
                   <p className="font-medium text-xl leading-relaxed">
-                    [Strong opening paragraph that hooks the reader and introduces your topic in an engaging way]
+                    The AI world is experiencing a radical shift. While tech giants pour billions into training ever-larger language models, a parallel revolution is unfolding: creating powerful AI with a fraction of the computational resources.
                   </p>
                   
-                  <h3 className="text-xl font-semibold text-primary mt-8">Introduction to [Topic]</h3>
+                  <h3 className="text-xl font-semibold text-primary mt-8">Introduction to Resource-Efficient AI</h3>
                   <p>
                     [First section of your article that provides background information and context for your topic. Make it accessible to a general audience while still being scientifically accurate.]
                   </p>
                   
-                  <h3 className="text-xl font-semibold text-primary mt-8">The Science Behind [Topic]</h3>
+                  <h3 className="text-xl font-semibold text-primary mt-8">The Science Behind Efficient Training</h3>
                   <p>
                     [Explain the scientific principles or findings in clear, accessible language. Use analogies or relatable examples where appropriate.]
                   </p>
@@ -60,10 +60,10 @@ const Article = () => {
               </CardContent>
             </Card>
             
-            <div className="border-t border-muted pt-6">
-              <h3 className="text-xl font-semibold mb-4">About This Article</h3>
+            <div className="border-t border-primary/20 pt-6">
+              <h3 className="text-xl font-semibold mb-4 text-primary">About This Article</h3>
               <p className="text-foreground/80">
-                This popular science article was written as part of my research project on [your topic]. It aims to translate complex scientific concepts into accessible language for a general audience while maintaining scientific accuracy.
+                This popular science article was written as part of my research project on AI efficiency. It aims to translate complex technical concepts about machine learning and computational efficiency into accessible language for a general audience while maintaining scientific accuracy.
               </p>
             </div>
           </div>

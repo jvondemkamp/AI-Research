@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 10%; /* Dark background (near black) */
+    --foreground: 0 0% 90%; /* Light text color */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 15%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 90%; /* Light text for cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 210 100% 35%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 145 45% 35%; /* Dark green from poster */
+    --primary-foreground: 0 0% 95%;
 
-    --secondary: 200 85% 45%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 20%; /* Dark gray */
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 180 75% 40%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 145 30% 40%; /* Slightly lighter green for accents */
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 145 45% 35%;
 
     --radius: 0.5rem;
   }
@@ -49,7 +49,7 @@
 
 @layer components {
   .hero-section {
-    @apply relative overflow-hidden bg-gradient-to-br from-primary to-accent text-white py-20 px-6 md:py-32;
+    @apply relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 text-foreground py-20 px-6 md:py-32;
   }
   
   .section-padding {
@@ -86,4 +86,17 @@
     0% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
   }
+}
+
+/* Additional dark theme styles */
+.card-gradient {
+  @apply bg-gradient-to-br from-card to-secondary/70 backdrop-blur-sm;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-br from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent;
 }

@@ -11,6 +11,7 @@ import Article from "./pages/Article";
 import Poster from "./pages/Poster";
 import NotFound from "./pages/NotFound";
 
+// Remove App.css import as we're using Tailwind fully
 const queryClient = new QueryClient();
 
 const App = () => (

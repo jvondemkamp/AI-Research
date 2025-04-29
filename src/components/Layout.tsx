@@ -24,10 +24,10 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white shadow-sm py-4 sticky top-0 z-50">
+      <header className="bg-background/95 backdrop-blur-sm shadow-md py-4 sticky top-0 z-50 border-b border-primary/20">
         <div className="page-container flex justify-between items-center">
-          <NavLink to="/" className="text-2xl font-heading font-bold text-primary">
-            Science Research
+          <NavLink to="/" className="text-2xl font-heading font-bold text-gradient">
+            AI Research
           </NavLink>
           
           {/* Desktop Navigation */}
@@ -58,7 +58,7 @@ const Layout = ({ children }: LayoutProps) => {
       
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-white pt-20">
+        <div className="md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md pt-20">
           <nav className="flex flex-col items-center space-y-6 py-8">
             {navItems.map((item) => (
               <NavLink
@@ -80,10 +80,10 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       
-      <footer className="bg-primary/10 border-t border-primary/20 py-6">
+      <footer className="bg-secondary/30 border-t border-primary/20 py-6">
         <div className="page-container text-center">
-          <p className="text-sm text-primary/80">
-            © {new Date().getFullYear()} Science Research Portfolio
+          <p className="text-sm text-foreground/60">
+            © {new Date().getFullYear()} Jackson Vondemkamp | AI Research Portfolio
           </p>
         </div>
       </footer>
