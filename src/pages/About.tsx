@@ -17,10 +17,11 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="glass overflow-hidden mb-6 border border-primary/20">
-                <div className="aspect-[4/5] bg-muted/30 flex items-center justify-center text-muted-foreground">
-                  {/* Replace with your image */}
-                  <p className="text-lg font-medium">Your Image Here</p>
-                </div>
+                <img 
+                  src="public/lovable-uploads/f6a69d67-5d06-4dc5-9dc0-fffcb3f93ab4.png" 
+                  alt="Jackson Vondemkamp" 
+                  className="w-full h-auto"
+                />
               </div>
               
               <Card className="border-primary/20 shadow-md card-gradient">

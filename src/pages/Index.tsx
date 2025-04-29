@@ -8,9 +8,17 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="page-container relative z-10">
+      {/* Hero Section with Mountain Image */}
+      <section className="hero-section relative" style={{height: '70vh'}}>
+        <div 
+          className="absolute inset-0 bg-cover bg-center z-0" 
+          style={{ 
+            backgroundImage: "url('public/lovable-uploads/711a24a7-2031-4eb6-b046-06d3808adf5b.png')",
+            backgroundPosition: 'center',
+            filter: 'brightness(0.7)'
+          }}
+        ></div>
+        <div className="page-container relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">Your Scientific Research Topic</h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
@@ -26,65 +34,19 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 mix-blend-multiply"></div>
       </section>
 
       {/* Introduction Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="page-container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Welcome to My Research Portfolio</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gradient">Welcome to My Research Portfolio</h2>
             <p className="text-lg text-foreground/80 mb-6">
               This website presents my scientific research on [your research topic], exploring the challenges and opportunities in this fascinating field. Through rigorous analysis and investigation, I've developed insights that may contribute to our understanding of [specific aspect of your research].
             </p>
             <p className="text-lg text-foreground/80">
               Browse through my work to learn more about my research journey, methodologies, findings, and their potential impact on [relevant field or society].
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Highlights */}
-      <section className="section-padding bg-muted/50">
-        <div className="page-container">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Research Highlights</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-0 shadow-md hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-3 text-primary">Key Finding 1</h3>
-                <p className="text-foreground/80 mb-4">
-                  Brief description of your first major research finding or insight. What makes this significant?
-                </p>
-                <Link to="/article" className="text-primary font-medium inline-flex items-center">
-                  Learn more <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white border-0 shadow-md hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-3 text-primary">Key Finding 2</h3>
-                <p className="text-foreground/80 mb-4">
-                  Brief description of your second major research finding or insight. How does this build on existing knowledge?
-                </p>
-                <Link to="/article" className="text-primary font-medium inline-flex items-center">
-                  Learn more <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white border-0 shadow-md hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-3 text-primary">Key Finding 3</h3>
-                <p className="text-foreground/80 mb-4">
-                  Brief description of your third major research finding or insight. What implications does this have?
-                </p>
-                <Link to="/article" className="text-primary font-medium inline-flex items-center">
-                  Learn more <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -101,7 +63,7 @@ const Index = () => {
               <Link to="/poster">View Science Poster</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/references">Browse References</Link>
+              <Link to="/article">Read Popular Science Article</Link>
             </Button>
           </div>
         </div>
